@@ -2,22 +2,22 @@
 
 <div class="lp_wrapper js-trigger" id="lp_wrapper">
 
-  <div class="l-hero">
-    <div class="l-hero-wrapper" id="wrapper">
-      <div class="l-hero-panel l-hero-panel-01 panel" id="panel01">
-        <p class="l-hero-panel__contents">Panel 1/4</p>
-      </div>
-      <div class="l-hero-panel l-hero-panel-02 panel" id="panel02">
-        <p class="l-hero-panel__contents">Panel 2/4</p>
-      </div>
-      <div class="l-hero-panel l-hero-panel-03 panel" id="panel03">
-        <p class="l-hero-panel__contents">Panel 3/4</p>
-      </div>
-      <div class="l-hero-panel l-hero-panel-04 panel" id="panel04">
-        <p class="l-hero-panel__contents">Panel 4/4</p>
-      </div>
-      <div class="l-hero-img-wrapper">
-        <div class="l-hero-img" id="img"></div>
+  <div class="p-mv">
+    <div class="p-mv__panels" id="wrapper">
+      <section class="p-mv__panel p-panel p-panel__01 js-panel" id="panel01">
+        <p class="p-panel__contents">Panel 1/4</p>
+      </section>
+      <section class="p-mv__panel p-panel p-panel__02 js-panel" id="panel02">
+        <p class="p-panel__contents">Panel 2/4</p>
+      </section>
+      <section class="p-mv__panel p-panel p-panel__03 js-panel" id="panel03">
+        <p class="p-panel__contents">Panel 3/4</p>
+      </section>
+      <section class="p-mv__panel p-panel p-panel__04 js-panel" id="panel04">
+        <p class="p-panel__contents">Panel 4/4</p>
+      </section>
+      <div class="p-mv__center p-bird">
+        <div class="p-bird__img" id="img"></div>
       </div>
     </div>
   </div>

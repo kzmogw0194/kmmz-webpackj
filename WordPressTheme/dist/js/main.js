@@ -181,7 +181,7 @@ _node_modules_gsap_all_js__WEBPACK_IMPORTED_MODULE_0__["default"].config({
 const wrapper = document.querySelector('#wrapper');
 if (wrapper) {
   // gsap.registerPlugin(ScrollTrigger); // npm/yarnの際に必要
-  const panels = _node_modules_gsap_all_js__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.panel');
+  const panels = _node_modules_gsap_all_js__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.js-panel');
   const wrapperWidth = wrapper.offsetWidth;
   /**
   * 横スクロール開始
@@ -204,46 +204,22 @@ if (wrapper) {
   });
 }
 
-var frame_count = 10,
-  offset_value = 370;
-_node_modules_gsap_all_js__WEBPACK_IMPORTED_MODULE_0__["default"].to(".l-hero-img", {
+var frame_count = 154,
+  offset_value = 170;
+_node_modules_gsap_all_js__WEBPACK_IMPORTED_MODULE_0__["default"].to(".p-bird__img", {
   backgroundPosition: -offset_value * frame_count + "px 50%",
   ease: "steps(" + frame_count + ")",
   onComplete: () => {
     document.getElementById("img").classList.add("item");
   },
   scrollTrigger: {
-    trigger: ".l-hero-img-wrapper",
+    trigger: ".p-bird",
     start: "top top",
     end: "+=" + frame_count * offset_value,
     pin: true,
+    repeat: 1,
     scrub: true
   }
-});
-
-/* アニメーションタイムラインを作成する 開始 */
-const customAnimation = _node_modules_gsap_all_js__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-  scrollTrigger: {
-    trigger: ".l-hero-img-wrapper",
-    start: "top center"
-  }
-});
-
-// トリガー到達時にアニメーションする1つ目の要素
-customAnimation.to(".item",
-//アニメーションする要素
-{
-  keyframes: [{
-    duration: 0.5,
-    x: 100,
-    y: 200
-  },
-  //このアニメーション完了後、下のアニメーションが発火
-  {
-    duration: 1,
-    x: 0,
-    y: 0
-  }]
 });
 
 /***/ }),

@@ -153,7 +153,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   const wrapper = document.querySelector('#wrapper');
   if(wrapper) {
       // gsap.registerPlugin(ScrollTrigger); // npm/yarnの際に必要
-      const panels = gsap.utils.toArray('.panel');
+      const panels = gsap.utils.toArray('.js-panel');
       const wrapperWidth = wrapper.offsetWidth;
       /**
       * 横スクロール開始
@@ -170,17 +170,17 @@ window.addEventListener("DOMContentLoaded", async () => {
       })
   }
 
-  var frame_count  = 10,
-  offset_value = 370;
+  var frame_count  = 154,
+  offset_value = 170;
 
-gsap.to(".l-hero-img", {
+gsap.to(".p-bird__img", {
 backgroundPosition: (-offset_value * frame_count) + "px 50%",
 ease: "steps(" + frame_count + ")",
 onComplete: () => {
   document.getElementById("img").classList.add("item");
 },
 scrollTrigger: {
-  trigger: ".l-hero-img-wrapper",
+  trigger: ".p-bird",
   start: "top top",
   end: "+=" + (frame_count * offset_value),
   pin: true,
